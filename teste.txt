@@ -1,0 +1,10 @@
+  IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://www.americanas.com.br/produto/1521500561?pfm_carac=Galaxy%20S&pfm_page=category&pfm_pos=grid&pfm_type=vit_product_grid");
+            
+     // Get the directories currently on the C drive.
+            string cDirs = driver.FindElement(By.XPath("//div[@class='src__BestPrice-sc-1jvw02c-5 cBWOIB priceSales']")).Text;
+     using (StreamWriter sw = new StreamWriter("CDriveDirs.xml"))
+            {
+                    sw.WriteLine(cDirs);
+                 }
+          
